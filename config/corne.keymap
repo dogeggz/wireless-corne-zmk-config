@@ -51,29 +51,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB           &kp Q  &kp W  &kp E         &kp R  &kp T        &kp Y       &kp U  &kp I          &kp O    &kp P     &kp BSPC
-&mt LCTRL ESCAPE  &kp A  &kp S  &kp D         &kp F  &kp G        &kp H       &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT         &kp Z  &kp X  &kp C         &kp V  &kp B        &kp N       &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                                &kp LEFT_ALT  &mo 1  &kp SPACE    &kp RETURN  &mo 2  &kp RIGHT_WIN
+&kp TAB    &kp Q  &kp W  &kp E         &kp R             &kp T        &kp Y       &kp U  &kp I          &kp O    &kp P     &kp BSPC
+&mo 1      &kp A  &kp S  &kp D         &kp F             &kp G        &kp H       &kp J  &kp K          &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C         &kp V             &kp B        &kp N       &kp M  &kp COMMA      &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                         &kp LEFT_ALT  &mt LCTRL ESCAPE  &kp SPACE    &kp RETURN  &mo 2  &kp RIGHT_WIN
             >;
         };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &kp EXCL    &kp AT        &kp HASH      &kp DLLR           &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTERISK  &kp LPAR          &kp RPAR           &kp NON_US_BACKSLASH
-&kp LCTRL  &kp HOME    &kp INSERT    &kp END       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp MINUS  &kp EQUAL  &kp GRAVE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE
-&kp LSHFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3       &kp UNDER  &kp PLUS   &kp TILDE     &kp LEFT_BRACE    &kp RIGHT_BRACE    &tog 3
-                                     &trans        &trans             &trans             &trans     &trans     &trans
-            >;
-        };
-
-        raise_layer {
+        layer_1 {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -81,28 +66,43 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1          &kp N2            &kp N3      &kp N4           &kp N5       &kp N6    &kp N7    &kp N8  &kp N9     &kp N0   &kp DEL
-&kp LCTRL  &kp C_PREVIOUS  &kp C_PLAY_PAUSE  &kp C_NEXT  &ctrl_shift_tab  &ctrl_tab    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &kp ESCAPE
-&kp LSHFT  &kp F1          &kp F2            &kp F3      &kp F4           &kp F5       &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &tog 4
-                                             &trans      &trans           &trans       &trans    &trans    &trans
+&kp TAB    &kp F1      &kp F2        &kp F3        &kp F4             &kp F5          &kp F6      &kp F7            &kp F8      &kp F9     &kp F10  &kp DEL
+&kp LCTRL  &kp HOME    &kp INSERT    &kp END       &kp C_VOLUME_DOWN  &kp C_VOL_UP    &kp LEFT    &kp DOWN          &kp UP      &kp RIGHT  &trans   &trans
+&kp LSHFT  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &bt BT_SEL 3    &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT  &trans     &trans   &tog 3
+                                     &trans        &trans             &trans          &trans      &trans            &trans
+            >;
+        };
+
+        layer_2 {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            bindings = <
+&kp TAB    &kp EXCL      &kp AT        &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET              &kp AMPS           &kp ASTERISK     &kp MINUS       &kp EQUAL     &kp BACKSPACE
+&kp LCTRL  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4      &kp NUMBER_5            &kp NUMBER_6           &kp NUMBER_7       &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0  &kp NON_US_BACKSLASH
+&kp LSHFT  &kp TILDE     &kp GRAVE     &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp UNDERSCORE  &kp PLUS      &kp PIPE
+                                       &trans          &trans            &trans                  &trans                 &trans             &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans      &trans      &trans        &trans           &trans              &rgb_ug RGB_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans
-&trans  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &trans           &trans
-&trans  &trans      &trans      &trans        &trans           &trans              &trans           &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans           &trans           &trans
-                                &trans        &trans           &trans              &trans           &trans           &trans
+&trans  &shift_tab  &kp UP_ARROW  &trans     &trans   &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT    &kp DOWN      &kp RIGHT  &trans   &trans     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans        &trans     &trans   &alt_f4    &trans  &trans  &trans  &trans  &trans  &trans
+                                  &trans     &kp RET  &trans     &trans  &trans  &trans
             >;
         };
 
         layer_4 {
             bindings = <
-&trans  &shift_tab  &kp UP_ARROW  &trans     &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT    &kp DOWN      &kp RIGHT  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans        &trans     &trans  &alt_f4    &trans  &trans  &trans  &trans  &trans  &trans
-                                  &trans     &trans  &trans     &trans  &trans  &trans
+&trans  &trans      &trans      &trans        &trans           &trans              &rgb_ug RGB_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans
+&trans  &kp C_PREV  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_PLAY_PAUSE    &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &trans           &trans
+&trans  &trans      &trans      &trans        &trans           &trans              &trans           &rgb_ug RGB_SPD  &rgb_ug RGB_SPI  &trans           &trans           &trans
+                                &trans        &trans           &trans              &trans           &trans           &trans
             >;
         };
     };
