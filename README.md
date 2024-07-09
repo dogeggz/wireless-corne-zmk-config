@@ -22,6 +22,6 @@
 ---
 
 - Layer Status
-- Battery Status *(icon)*
+- Battery Status *(Percentage)*
 - ~~WPM~~
 - Output *(Current connection USB/BLE)*
