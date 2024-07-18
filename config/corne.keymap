@@ -12,7 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -27,7 +27,7 @@
             >;
         };
 
-        layer_1 {
+        other {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -42,7 +42,7 @@
             >;
         };
 
-        layer_2 {
+        symbol_num {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -50,28 +50,46 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET              &kp AMPS           &kp ASTERISK     &kp MINUS       &kp EQUAL     &kp GREATER_THAN
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4      &kp NUMBER_5            &kp NUMBER_6           &kp NUMBER_7       &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0  &kp BSLH
-&trans  &kp TILDE     &kp GRAVE     &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp UNDERSCORE  &kp PLUS      &kp PIPE
-                                    &trans          &trans            &trans                  &trans                 &trans             &trans
+&kp LESS_THAN  &kp EXCL      &kp AT        &kp HASH        &kp DLLR          &kp PRCNT               &kp CARET              &kp AMPS           &kp ASTERISK     &kp MINUS       &kp EQUAL     &kp GREATER_THAN
+&trans         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4      &kp NUMBER_5            &kp NUMBER_6           &kp NUMBER_7       &kp NUMBER_8     &kp NUMBER_9    &kp NUMBER_0  &kp BSLH
+&trans         &kp TILDE     &kp GRAVE     &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp UNDERSCORE  &kp PLUS      &kp PIPE
+                                           &trans          &trans            &trans                  &trans                 &trans             &trans
             >;
         };
 
-        layer_3 {
+        media {
             bindings = <
-&trans  &kp ESCAPE  &kp UP_ARROW  &mo 4         &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT    &kp DOWN      &kp RIGHT     &kp C_VOLUME_DOWN  &kp C_VOL_UP    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans        &trans        &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                                  &kp LEFT_ALT  &kp LCTRL          &kp SPACE       &trans  &trans  &trans
+&trans  &kp ESCAPE  &kp UP_ARROW  &kp DEL    &trans             &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT    &kp DOWN      &kp RIGHT  &kp C_VOLUME_DOWN  &kp C_VOL_UP    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans        &trans     &trans             &trans          &trans  &trans  &trans  &trans  &trans  &tog 4
+                                  &trans     &trans             &trans          &trans  &trans  &trans
             >;
         };
 
-        layer_4 {
+        league {
             bindings = <
-&trans  &trans  &trans  &trans      &trans   &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans   &trans     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans   &trans     &trans  &trans  &trans  &trans  &trans  &trans
-                        &kp LA(F4)  &kp DEL  &kp RET    &trans  &trans  &trans
+&kp TAB  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N4     &kp N5       &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp Q         &kp W         &kp E         &kp R      &kp N6       &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &kp Z         &kp X         &kp C         &kp D      &kp F        &trans  &trans  &trans  &trans  &trans  &tog 5
+                                     &kp ESCAPE    &kp LCTRL  &kp SPACE    &trans  &trans  &trans
+            >;
+        };
+
+        apex_1 {
+            bindings = <
+&kp M  &kp ESC    &kp N1  &kp N2  &kp N3  &kp N4    &trans  &trans  &trans  &trans  &trans  &trans
+&mo 6  &kp TAB    &kp Q   &kp W   &kp E   &kp R     &trans  &trans  &trans  &trans  &trans  &trans
+&kp G  &kp LSHFT  &kp A   &kp S   &kp D   &kp F     &trans  &trans  &trans  &trans  &trans  &tog 0
+                          &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        apex_2 {
+            bindings = <
+&trans  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &kp T   &kp B     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
