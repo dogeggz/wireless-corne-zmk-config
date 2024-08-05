@@ -59,10 +59,10 @@
 
         media {
             bindings = <
-&kp ESC    &kp F4    &kp UP_ARROW  &kp DEL    &none              &none           &none  &none  &none  &none  &none  &to 5
-&kp TAB    &kp LEFT  &kp DOWN      &kp RIGHT  &kp C_VOLUME_DOWN  &kp C_VOL_UP    &none  &none  &none  &none  &none  &to 4
-&kp LSHFT  &kp Z     &kp X         &kp C      &kp V              &kp ENTER       &none  &none  &none  &none  &none  &to 0
-                                   &kp LALT   &kp LCTRL          &kp SPACE       &none  &none  &none
+&kp ESC    &kp F4    &kp UP_ARROW  &kp DEL    &none              &kp PRINTSCREEN    &none  &none  &none   &none  &none  &to 5
+&kp TAB    &kp LEFT  &kp DOWN      &kp RIGHT  &kp C_VOLUME_DOWN  &kp C_VOL_UP       &none  &none  &none   &none  &none  &to 4
+&kp LSHFT  &kp Z     &kp X         &kp C      &kp V              &kp ENTER          &none  &none  &none   &none  &none  &to 0
+                                   &kp LALT   &kp LCTRL          &kp SPACE          &none  &none  &trans
             >;
         };
 
