@@ -11,9 +11,9 @@
 
 ![Default Layer](./images/layer0.png)
 
-~~![Other Layer](./images/layer1.png)~~
+~~![Other Layer]~~
 
-~~![Symbol Layer](./images/layer2.png)~~
+~~![Symbol Layer]~~
 
 
 [Keymap-editor link](https://nickcoutsos.github.io/keymap-editor/)
