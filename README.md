@@ -11,10 +11,9 @@
 
 ![Default Layer](./images/layer0.png)
 
-~~![Other Layer]~~
+![Raise Layer](./images/layer1.png)
 
-~~![Symbol Layer]~~
-
+![Lower Layer](./images/layer2.png)
 
 [Keymap-editor link](https://nickcoutsos.github.io/keymap-editor/)
 
@@ -25,5 +24,4 @@
 - Layer Status
 - Battery Status _(Percentage)_
 - Profile Status _(Bluetooth)_
-- ~~WPM~~
 - Output _(Current connection USB/BLE)_
